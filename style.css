@@ -670,3 +670,25 @@
   h1{ font-size: 28px !important; }
   .phone{ display: none; }
 }
+/* MOBILE MENU FIX */
+.hamburger{display:none; font-size:28px; cursor:pointer;}
+.hide-mobile{display:block}
+@media(max-width:768px){
+  .hamburger{display:block}
+  .hide-mobile{display:none}
+  .menu{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#fff;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    padding:20px;
+    z-index:999;
+  }
+  .menu.active{display:block}
+  .menu ul{flex-direction:column; align-items:flex-start; gap:15px}
+  .menu ul ul{position:static; box-shadow:none; padding-left:20px}
+  header{position:relative}
+}
