@@ -25,12 +25,13 @@
         <!-- ================= HEADER ================= -->
 
         <header>
+		
             <div class="container nav">
                 <a href="#home" class="logo">
                     <img src="images/logo.png" style="width: 170px; height: 80px; object-fit: contain" />
                 </a>
 
-                <div class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+				<div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
 
                 <div class="menu" id="mobileMenu">
                     <ul>
@@ -58,15 +59,35 @@
         </header>
 
         <script>
-            function toggleMenu() {
-                document.getElementById("mobileMenu").classList.toggle("active");
-            }
-            function openSub(e) {
-                if (window.innerWidth <= 900) {
-                    e.preventDefault();
-                    document.getElementById("submenu").classList.toggle("show");
-                }
-            }
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  const btn = document.getElementById("hamburgerBtn").querySelector('i');
+  menu.classList.toggle("active");
+  
+  if(menu.classList.contains("active")){
+    btn.className = "fa-solid fa-xmark";
+    btn.style.color = "#fff";
+    document.getElementById("hamburgerBtn").style.position = "fixed";
+    document.getElementById("hamburgerBtn").style.right = "20px";
+    document.getElementById("hamburgerBtn").style.top = "20px";
+  } else {
+    btn.className = "fa-solid fa-bars";
+    btn.style.color = "#000";
+    document.getElementById("hamburgerBtn").style.position = "relative";
+    document.getElementById("hamburgerBtn").style.right = "auto";
+    document.getElementById("hamburgerBtn").style.top = "auto";
+  }
+}
+function openSub(e) {
+  if (window.innerWidth <= 900) {
+    e.preventDefault();
+    document.getElementById("submenu").classList.toggle("show");
+  }
+}
+
+
+
+
         </script>
 
         <!-- ================= HERO ================= -->
@@ -428,7 +449,33 @@
 				
             </div>
         </section>
-
+<!-- ================= FAQ ================= -->
+<!-- ================= FAQ ================= -->
+<section id="faq" style="padding: 70px 0; background: #f7fbff;">
+  <div class="container">
+    <div class="section-title">
+      <h2>Frequently Asked <span>Questions</span></h2>
+    </div>
+    <div class="faq-wrapper" style="max-width: 800px; margin: auto;">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">What electrical services do you provide? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-answer">We provide complete electrical solutions - new wiring, switchboard & panel installation, fault finding & repair, and maintenance.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Do you supply office stationery in bulk? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-answer">Yes, we supply all types of office stationery in bulk at wholesale prices with on-time delivery in Gurugram.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">What is your service area? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-answer">We are based in Sector 44, Gurugram and provide services across Gurugram, Delhi NCR.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">How can I get a quote? <i class="fa-solid fa-plus"></i></div>
+        <div class="faq-answer">Just fill the form or call us at +91 0000000000.</div>
+      </div>
+    </div>
+  </div>
+</section>
         <!-- ================= CTA ================= -->
 
         <section class="cta">
@@ -505,5 +552,21 @@
                 <div class="copyright">© 2026 Nexinfosoft IT Solutions. All Rights Reserved.</div>
             </div>
         </footer>
+		<script>
+		function toggleFaq(el){
+  const item = el.parentElement;
+  const allItems = document.querySelectorAll('.faq-item');
+  
+  // agar ye already khula hai to band karo
+  if(item.classList.contains('active')){
+    item.classList.remove('active');
+  } else {
+    // sab band karo
+    allItems.forEach(i => i.classList.remove('active'));
+    // isko kholo
+    item.classList.add('active');
+  }
+}
+		</script>
     </body>
 </html>

@@ -732,3 +732,85 @@
 
 
 
+
+/* ===== FIX - Open Close Working ===== */
+.hamburger{ display:none; font-size:26px; cursor:pointer; z-index:100001; }
+@media(max-width:900px){
+  .hamburger{ display:block; }
+  header{ position:fixed !important; top:0; left:0; width:100%; background:#fff !important; z-index:9998; }
+  body{ padding-top:75px; }
+
+  #mobileMenu{
+    position:fixed !important;
+    top:0; 
+    right:0 !important;
+    width:100% !important; 
+    height:100vh !important;
+    background:#0e2f7a !important;
+    padding:100px 30px !important;
+    z-index:99999 !important;
+    display:flex !important;
+    flex-direction:column;
+    transform: translateX(100%);
+    transition: transform 0.35s ease !important;
+  }
+  #mobileMenu.active{
+    transform: translateX(0%) !important;
+  }
+  #mobileMenu ul{ flex-direction:column !important; width:100%; gap:0 !important; }
+  #mobileMenu ul li{ width:100%; padding:16px 0; border-bottom:1px solid rgba(255,255,255,0.2); }
+  #mobileMenu ul li a{ color:#fff !important; font-size:18px; }
+  #mobileMenu ul li ul{ background:rgba(255,255,255,0.15) !important; position:static !important; box-shadow:none !important; }
+  .phone, header .quote-btn{ display:none !important; }
+}
+
+
+/* ===== FAQ CSS ===== */
+.faq-item{
+  background:#fff;
+  border:1px solid #dce8f5;
+  border-radius:10px;
+  margin-bottom:15px;
+  overflow:hidden;
+  box-shadow:0 3px 15px rgba(0,0,0,0.05);
+}
+.faq-question{
+  padding:18px 20px;
+  font-weight:700;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#10264a;
+  font-size:16px;
+}
+.faq-question i{
+  background:#0e2f7a;
+  color:#fff;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  transition:0.3s;
+}
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  padding:0 20px;
+  color:#555;
+  font-size:14px;
+  line-height:1.6;
+  transition: all 0.35s ease;
+}
+.faq-item.active .faq-answer{
+  max-height:200px;
+  padding:0 20px 18px;
+}
+.faq-item.active .faq-question i{
+  transform: rotate(45deg);
+  background:#ffca28;
+  color:#000;
+}
