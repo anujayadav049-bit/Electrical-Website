@@ -385,7 +385,7 @@
 
         .why {
             background: #f3f9ff;
-            padding: 30px;
+            padding: 20px;
             border-radius: 10px;
         }
 
@@ -396,7 +396,7 @@
         .why-item {
             display: flex;
             gap: 15px;
-            margin: 20px 0;
+            margin: 10px;
         }
 
         .why-icon {
@@ -692,3 +692,43 @@
   .menu ul ul{position:static; box-shadow:none; padding-left:20px}
   header{position:relative}
 }
+
+
+
+
+
+
+
+
+
+
+
+.hamburger{ display:none; font-size:26px; cursor:pointer; }
+@media(max-width:900px){
+  .hamburger{ display:block; }
+  .nav{ position:relative; }
+  .menu{ display:none; position:absolute; top:75px; left:0; width:100%; background:#fff; padding:15px 20px; box-shadow:0 10px 20px rgba(0,0,0,0.15); z-index:9999; }
+  .menu.active{ display:block; }
+  .menu ul{ flex-direction:column; gap:0; }
+  .menu ul li{ padding:12px 0; border-bottom:1px solid #eee; }
+  .menu ul li ul{ position:static; box-shadow:none; min-width:100%; display:none; padding-left:15px; margin-top:10px; }
+  .menu ul li ul.show{ display:flex !important; flex-direction:column; }
+  .phone, .quote-btn{ display:none !important; }
+}
+@media(max-width:900px){
+  header{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+  }
+  body{
+    padding-top: 75px;
+  }
+}
+
+
+
+
+
