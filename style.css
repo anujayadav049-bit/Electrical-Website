@@ -373,3 +373,134 @@ footer li:hover { transform: translateX(4px); color: #fff; }
 
 #mobileMenu{ z-index: 99999 !important; }
 body:has(#mobileMenu.active) #bulk-offer-bar{ display:none !important; }
+
+
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 40px 20px;
+}
+.service-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid #FF7A00;
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+.service-card:nth-child(1){ animation-delay: 0.1s; }
+.service-card:nth-child(2){ animation-delay: 0.3s; }
+.service-card:nth-child(3){ animation-delay: 0.5s; }
+
+.service-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(10,47,107,0.2);
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  background: #0A2F6B;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #FF7A00;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: rotateY(360deg);
+  background: #FF7A00;
+  color: white;
+}
+
+.service-card h3 {
+  color: #0A2F6B;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Sliding shine effect on hover */
+.service-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,122,0,0.1), transparent);
+  transition: 0.6s;
+}
+.service-card:hover::after {
+  left: 100%;
+}
+
+
+/* ===== MOBILE ANIMATION FIX - 100% Working ===== */
+
+/* 1. Mobile pe animation force on karo */
+@media (max-width: 768px) {
+  .service-card, .site-logo img, .sliding-bar span, #ies-logo-container {
+    animation: none !important;
+    -webkit-animation: none !important;
+  }
+  
+  /* Ab mobile ke liye alag se enable karo */
+  .service-card {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: mobileFadeUp 0.8s ease forwards !important;
+    -webkit-animation: mobileFadeUp 0.8s ease forwards !important;
+  }
+  
+  .service-card:nth-child(1){ animation-delay: 0.1s !important; }
+  .service-card:nth-child(2){ animation-delay: 0.3s !important; }
+  .service-card:nth-child(3){ animation-delay: 0.5s !important; }
+  
+  .service-icon {
+    transition: all 0.4s ease !important;
+  }
+}
+
+@keyframes mobileFadeUp {
+  from { 
+    transform: translateY(30px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+@-webkit-keyframes mobileFadeUp {
+  from { -webkit-transform: translateY(30px); opacity: 0; }
+  to { -webkit-transform: translateY(0); opacity: 1; }
+}
+
+/* 2. Hover ki jagah active lagao mobile ke liye */
+@media (max-width: 768px) {
+  .service-card:active {
+    transform: translateY(-10px) scale(1.02) !important;
+    box-shadow: 0 15px 30px rgba(10,47,107,0.2) !important;
+  }
+  .service-card:active .service-icon {
+    transform: rotateY(360deg) !important;
+    background: #FF7A00 !important;
+    color: white !important;
+  }
+}
