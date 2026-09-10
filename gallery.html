@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electrical Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+<!-- ===== TOP MARQUEE SAME ===== -->
+<div class="ies-marquee-wrapper">
+  <div class="ies-marquee">
+    <span>⚡ INDUSTRIAL EQUIPMENT SOLUTION - 24x7 Electrical Work Service Available &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+    <span>🛠️ All Types Office Stationery & Product Supply at Best Price &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+    <span>📞 Call Now: +91-XXXXXXXXXX - Free Site Visit &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+    <span>⚡ INDUSTRIAL EQUIPMENT SOLUTION - 24x7 Electrical Work Service Available &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+    <span>🛠️ All Types Office Stationery & Product Supply at Best Price &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+  </div>
+</div>
+
+<!-- ===== HEADER SAME ===== -->
+   <header>
+		
+            <div class="container nav">
+                <a href="home.html" class="logo">
+                    <img src="images/logo.jpeg" style="width: 170px; height: 80px; object-fit: contain" />
+                </a>
+
+				<div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+
+                <div class="menu" id="mobileMenu">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li>
+                            <a href="services.html" onclick="openSub(event)">Services <i class="fa-solid fa-angle-down"></i></a>
+                            <ul id="submenu">
+                                <li><a href="electrical.html">Electrical</a></li>
+                                <li><a href="stationery.html">Stationery</a></li>
+                                <li><a href="computer.html">Computer</a></li>
+                                <li><a href="printing.html">Printing</a></li>
+                                <li><a href="general.html">General Items</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="phone"><i class="fa-solid fa-phone"></i> +91 0000000000</div>
+                <a href="contact.html" class="quote-btn">Get Quote</a>
+            </div>
+        </header>
+<!-- ================= GALLERY HEAVY PAGE - ENGLISH ================= -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+.gallery-filter button.active{background:#0e2f7a!important; color:#fff!important; border-color:#0e2f7a!important}
+.gallery-item{transition:all .3s; cursor:pointer}
+.gallery-item:hover{transform:translateY(-5px); box-shadow:0 20px 50px rgba(14,47,122,.15)!important}
+.gallery-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:18px}
+@media(max-width:600px){.gallery-grid{grid-template-columns:1fr 1fr; gap:10px}}
+</style>
+
+<section style="background:linear-gradient(135deg,#0e2f7a 0%,#1e45b8 100%); padding:70px 0 50px; color:#fff; text-align:center">
+  <div class="container">
+    <span style="background:#ffcc00; color:#0e2f7a; padding:6px 14px; border-radius:20px; font-size:11px; font-weight:900; letter-spacing:1px">500+ PROJECTS COMPLETED • REAL PHOTOS</span>
+    <h1 style="font-size:50px; font-weight:900; margin:20px 0 10px">Our <span style="color:#ffcc00">Work Speaks</span></h1>
+    <p style="opacity:.8; max-width:650px; margin:0 auto; font-size:15px; line-height:1.6">Not stock images from Google - real photos of our own work. Electrical, Printing, Office Setup - all authentic.</p>
+    <div style="margin-top:25px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap" class="gallery-filter">
+      <button class="active" data-filter="all" style="background:#fff; color:#0e2f7a; border:1px solid #fff; padding:9px 18px; border-radius:30px; font-weight:800; font-size:12px; cursor:pointer">All Work</button>
+      <button data-filter="electrical" style="background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.2); padding:9px 18px; border-radius:30px; font-weight:700; font-size:12px; cursor:pointer">⚡ Electrical</button>
+      <button data-filter="printing" style="background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.2); padding:9px 18px; border-radius:30px; font-weight:700; font-size:12px; cursor:pointer">🖨️ Printing</button>
+      <button data-filter="office" style="background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.2); padding:9px 18px; border-radius:30px; font-weight:700; font-size:12px; cursor:pointer">🏢 Office Setup</button>
+      <button data-filter="computer" style="background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.2); padding:9px 18px; border-radius:30px; font-weight:700; font-size:12px; cursor:pointer">💻 IT Work</button>
+    </div>
+  </div>
+</section>
+
+<section style="padding:40px 0 70px; background:#f6f8ff">
+  <div class="container">
+    <div class="gallery-grid">
+
+      <!-- ELECTRICAL ITEMS -->
+      <div class="gallery-item" data-cat="electrical" style="background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 10px 25px rgba(14,47,122,.06); border:1px solid #eef2ff">
+        <div style="height:220px; background:linear-gradient(135deg,#0e2f7a,#3a6eff); display:flex; align-items:center; justify-content:center; flex-direction:column; color:#fff; position:relative">
+          <div style="font-size:50px"><i class="fa-solid fa-bolt"></i></div><p style="margin-top:10px; font-weight:800; font-size:13px">Office Wiring Work</p><span style="position:absolute; top:10px; left:10px; background:#ffcc00; color:#0e2f7a; font-size:10px; font-weight:900; padding:4px 10px; border-radius:20px">ELECTRICAL</span>
+        </div>
+        <div style="padding:14px"><b style="font-size:13px; color:#0e2f7a">Sector 45 - 20 Cabin Wiring</b><p style="font-size:11px; color:#666; margin-top:4px">📍 Gurugram • Completed in 2 Days</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="electrical" style="background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 10px 25px rgba(14,47,122,.06); border:1px solid #eef2ff">
+        <div style="height:220px; background:linear-gradient(135deg,#111,#555); display:flex; align-items:center; justify-content:center; flex-direction:column; color:#fff; position:relative">
+          <div style="font-size:50px"><i class="fa-solid fa-lightbulb"></i></div><p style="margin-top:10px; font-weight:800; font-size:13px">LED Lighting Setup</p><span style="position:absolute; top:10px; left:10px; background:#ffcc00; color:#0e2f7a; font-size:10px; font-weight:900; padding:4px 10px; border-radius:20px">ELECTRICAL</span>
+        </div>
+        <div style="padding:14px"><b style="font-size:13px; color:#0e2f7a">Cyber City - False Ceiling Lights</b><p style="font-size:11px; color:#666; margin-top:4px">📍 Gurugram • Completed in 1 Day</p></div>
+      </div>
+
+      <!-- PRINTING ITEMS -->
+      <div class="gallery-item" data-cat="printing" style="background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 10px 25px rgba(14,47,122,.06); border:1px solid #eef2ff">
+        <div style="height:220px; background:linear-gradient(135deg,#d81b60,#ff4081); display:flex; align-items:center; justify-content:center; flex-direction:column; color:#fff; position:relative">
+          <div style="font-size:50px"><i class="fa-solid fa-id-card"></i></div><p style="margin-top:10px; font-weight:800; font-size:13px">ID Cards + Lanyard</p><span style="position:absolute; top:10px; left:10px; background:#fff; color:#d81b60; font-size:10px; font-weight:900; padding:4px 10px; border-radius:20px">PRINTING</span>
+        </div>
+        <div style="padding:14px"><b style="font-size:13px; color:#0e2f7a">500 ID Cards - MNC Company</b><p style="font-size:11px; color:#666; margin-top:4px">📍 Udyog Vihar • Delivered in 12 Hours</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="printing" style="background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 10px 25px rgba(14,47,122,.06); border:1px solid #eef2ff">
+        <div style="height:220px; background:linear-gradient(135deg,#ff6f00,#ffcc00); display:flex; align-items:center; justify-content:center; flex-direction:column; color:#0e2f7a; position:relative">
+          <div style="font-size:50px"><i class="fa-solid fa-address-card"></i></div><p style="margin-top:10px; font-weight:800; font-size:13px">Visiting Cards - Premium</p><span style="position:absolute; top:10px; left:10px; background:#0e2f7a; color:#ffcc00; font-size:10px; font-weight:900; padding:4px 10px; border-radius:20px">PRINTING</span>
+        </div>
+        <div style="padding:14px"><b style="font-size:13px; color:#0e2f7a">1000 Matt Laminated Cards</b><p style="font-size:11px; color:#666; margin-top:4px">📍 Sohna Road • Same Day Delivery</p></div>
+      </div>
+
+      <!-- OFFICE SETUP -->
+      <div class="gallery-item" data-cat="office" style="background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 10px 25px rgba(14,47,122,.06); border:1px solid #eef2ff">
+        <div style="height:220px; background:linear-gradient(135deg,#0f766e,#14b8a6); display:flex; align-items:center; justify-content:center; flex-direction:column; color:#fff; position:relative">
+          <div style="font-size:50px"><i class="fa-solid fa-building"></i></div><p style="margin-top:10px; font-weight:800; font-size:13px">Full Office Setup</p><span style="position:absolute; top:10px; left:10px; background:#0e2f7a; color:#fff; font-size:10px; font-weight:900; padding:4px 10px; border-radius:20px">OFFICE SETUP</span>
+        </div>
+        <div style="padding:14px"><b style="font-size:13px; color:#0e2f7a">New Office - Complete Solution</b><p style="font-size:11px; color:#666; margin-top:4px">📍 Sector 62 • 5 Days Project</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="office" style="background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 10px 25px rgba(14,47,122,.06); border:1px solid #eef2ff">
+        <div style="height:220px; background:linear-gradient(135deg,#4a148c,#9c27b0); display:flex; align-items:center; justify-content:center; flex-direction:column; color:#fff; position:relative">
+          <div style="font-size:50px"><i class="fa-solid fa-box-open"></i></div><p style="margin-top:10px; font-weight:800; font-size:13px">Stationery Bulk Supply</p><span style="position:absolute; top:10px; left:10px; background:#ffcc00; color:#0e2f7a; font-size:10px; font-weight:900; padding:4px 10px; border-radius:20px">STATIONERY</span>
+        </div>
+        <div style="padding:14px"><b style="font-size:13px; color:#0e2f7a">Monthly Stationery - 150 Staff</b><p style="font-size:11px; color:#666; margin-top:4px">📍 Manesar • Monthly Contract</p></div>
+      </div>
+
+      <!-- COMPUTER -->
+      <div class="gallery-item" data-cat="computer" style="background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 10px 25px rgba(14,47,122,.06); border:1px solid #eef2ff">
+        <div style="height:220px; background:linear-gradient(135deg,#1f2937,#6b7280); display:flex; align-items:center; justify-content:center; flex-direction:column; color:#fff; position:relative">
+          <div style="font-size:50px"><i class="fa-solid fa-server"></i></div><p style="margin-top:10px; font-weight:800; font-size:13px">LAN + WiFi Setup</p><span style="position:absolute; top:10px; left:10px; background:#25D366; color:#fff; font-size:10px; font-weight:900; padding:4px 10px; border-radius:20px">IT WORK</span>
+        </div>
+        <div style="padding:14px"><b style="font-size:13px; color:#0e2f7a">30 System Networking</b><p style="font-size:11px; color:#666; margin-top:4px">📍 Golf Course Road • Completed in 1 Day</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="computer" style="background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 10px 25px rgba(14,47,122,.06); border:1px solid #eef2ff">
+        <div style="height:220px; background:linear-gradient(135deg,#0e2f7a,#3a6eff); display:flex; align-items:center; justify-content:center; flex-direction:column; color:#fff; position:relative">
+          <div style="font-size:50px"><i class="fa-solid fa-video"></i></div><p style="margin-top:10px; font-weight:800; font-size:13px">CCTV Installation</p><span style="position:absolute; top:10px; left:10px; background:#ffcc00; color:#0e2f7a; font-size:10px; font-weight:900; padding:4px 10px; border-radius:20px">IT WORK</span>
+        </div>
+        <div style="padding:14px"><b style="font-size:13px; color:#0e2f7a">8 Camera Setup - Office</b><p style="font-size:11px; color:#666; margin-top:4px">📍 Palam Vihar • Half Day Job</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ================= GALLERY ENGLISH END ================= -->
+
+
+<!-- ================= GALLERY HEAVY PAGE END ================= -->
+
+   <section class="cta">
+            <div class="container cta-inner">
+                <div>
+                    <h2>Need a Quote or Have a Question?</h2>
+                    <p>Get in touch with us today. We are here to help!</p>
+                </div>
+
+                <a href="#contact" class="quote-btn"> Request a Quote → </a>
+            </div>
+        </section>
+<!-- ===== FOOTER SAME ===== -->
+ <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <div class="logo">
+                            <div>
+                                <img src="images/logo.webp" style="width: 180px; height: 80px; object-fit: contain" />
+                            </div>
+                        </div>
+
+                        <p style="margin-top: 20px">
+                            Electrical services, office stationery and reliable<br> product supply solutions.
+							Quality services, reliable<br>  products and complete solutions for your electrical,<br>  office and supply needs.
+
+
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Quick Links</h3>
+
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="services.html">Service</a></li>
+                            <li><a href="privacypolicy.html">Privacy & Policy</a></li>
+                            <li><a href="termcondition.html">Term & Condition</a></li>
+                            <li><a href="refund.html">Refund Policy</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>Contact Us</h3>
+
+                        <p><i class="fa-solid fa-phone"></i> +91 0000000000</p>
+                        <p><i class="fa-brands fa-whatsapp"></i> +91 0000000000</p>
+                        <p><i class="fa-solid fa-envelope"></i> nexinfosoft@gmail.com</p>
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i> Plot No. 113, Near Ramada By<br> Wyndham Central,
+                            Sector 44, <br>Gurugram, Haryana – 122003
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Follow Us</h3>
+
+                        <div class="social">
+                            <span><a href="" target="_blank" style="width:48px; height:40px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; text-decoration:none;">
+                               <i class="fa-brands fa-facebook-f"></i></a></span>
+                            <span> <a href="" target="_blank" style="width:48px; height:40px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; text-decoration:none;">
+                                <i class="fa-brands fa-instagram"></i></a></span>
+                            <span> <a href="" target="_blank" style="width:48px; height:40px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; text-decoration:none;">
+                               <i class="fa-brands fa-linkedin-in"></i></a></span>
+                            <span><a href="" target="_blank" style="width:48px; height:40px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; text-decoration:none;">
+                              <i class="fa-solid fa-play"></i></a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright">© 2026 Nexinfosoft IT Solutions. All Rights Reserved.</div>
+            </div>
+        </footer>
+
+<script src="script.js"></script>
+
+<script>
+// Simple Filter Logic
+document.querySelectorAll('.gallery-filter button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.gallery-filter button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    let filter = btn.getAttribute('data-filter');
+    document.querySelectorAll('.gallery-item').forEach(item=>{
+      if(filter==='all' || item.getAttribute('data-cat')===filter){item.style.display='block'}else{item.style.display='none'}
+    });
+  });
+});
+</script>
+
+</body>
+</html>

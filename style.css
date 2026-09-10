@@ -368,7 +368,7 @@ footer li:hover { transform: translateX(4px); color: #fff; }
   z-index: 9999;
   mix-blend-mode: difference;
 }
-
+/*mouse  cursor*/
 
 
 #mobileMenu{ z-index: 99999 !important; }
@@ -449,5 +449,59 @@ body:has(#mobileMenu.active) #bulk-offer-bar{ display:none !important; }
 .service-card:hover::after {
   left: 100%;
 }
+/* Sliding shine effect on hover */
+
+/* ===== MARQUEE Z-INDEX FIX FOR MOBILE MENU ===== */
+.ies-marquee-wrapper {
+  z-index: 10 !important; /* pehle 9999 tha, ab 10 kiya */
+  position: relative;
+}
+
+/* Aapke 3-line menu ka z-index high karo */
+.mobile-menu, 
+#mobile-menu, 
+.elementor-nav-menu--dropdown,
+.navbar-collapse,
+.menu-container,
+#site-navigation,
+.ies-mobile-nav {
+  z-index: 99999 !important;
+  position: relative;
+}
+
+/* Agar Elementor use kar rahe ho to ye fix */
+.elementor-menu-toggle + div {
+  z-index: 99999 !important;
+}
+/* ===== MARQUEE Z-INDEX FIX FOR MOBILE MENU ===== */
 
 
+
+ @media (max-width: 900px) { #submenu{display:none!important} #submenu.show{display:flex!important;flex-direction:column} }
+        .ies-marquee-wrapper{background:#ffcc00;color:#000;overflow:hidden;white-space:nowrap;padding:10px 0;font-weight:600;font-size:14px;position:relative;z-index:9999}
+        .ies-marquee{display:inline-block;animation:iesScroll 25s linear infinite}
+        .ies-marquee span{padding-right:50px}
+        @keyframes iesScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+        .ies-marquee-wrapper:hover .ies-marquee{animation-play-state:paused}
+
+        /* ABOUT PAGE CSS */
+        .about-hero-new{background:#0e2f7a;padding:80px 20px;text-align:center;color:#fff;position:relative}
+        .about-hero-new h1{font-size:46px;line-height:1.2}
+        .about-hero-new h1 span{color:#ffcc00}
+        .about-section{padding:70px 0}
+        .about-grid{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+        .about-grid>div{flex:1;min-width:320px}
+        .badge-ies{background:rgba(14,47,122,0.1);color:#0e2f7a;padding:6px 14px;border-radius:20px;font-weight:700;font-size:12px;letter-spacing:1px;display:inline-block;margin-bottom:12px}
+        .about-grid h2{font-size:36px;color:#0e2f7a;line-height:1.2;margin-bottom:15px}
+        .mv-grid-new{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:30px}
+        .mv-box-new{background:#fff;border:1px solid #e5e7ff;padding:25px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.04)}
+        .mv-box-new i{background:#0e2f7a;color:#fff;width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:10px;margin-bottom:12px;font-size:20px}
+        .stats-new{background:#0e2f7a;display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px;padding:40px 20px;border-radius:15px;color:#fff;margin-top:40px;text-align:center}
+        .stats-new b{font-size:36px;color:#ffcc00;display:block}
+
+@media(max-width:900px){
+  .hamburger{display:block !important; font-size:26px; cursor:pointer}
+  .menu{position:fixed !important; top:70px; right:-100%; width:85%; height:100vh; background:#fff; transition:.35s; z-index:9999; padding:20px}
+  .menu.active{right:0 !important}
+  #submenu{display:none} #submenu.open{display:block !important}
+}

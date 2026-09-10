@@ -142,3 +142,24 @@ gsap.utils.toArray(".stat-number").forEach(num => {
     }
   });
 });
+
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('show')}
+function openSub(e){e.preventDefault();document.getElementById('submenu').classList.toggle('show')}
+
+
+
+// ===== MENU FIX - ADD AT BOTTOM ONLY =====
+function toggleMenu(){
+  var menu = document.getElementById("mobileMenu");
+  var icon = document.querySelector("#hamburgerBtn i");
+  menu.classList.toggle("active");
+  if(menu.classList.contains("active")){
+    icon.className = "fa-solid fa-xmark";
+  } else {
+    icon.className = "fa-solid fa-bars";
+  }
+}
+function openSub(e){
+  e.preventDefault();
+  document.getElementById("submenu").classList.toggle("open");
+}
