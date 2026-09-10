@@ -505,3 +505,22 @@ body:has(#mobileMenu.active) #bulk-offer-bar{ display:none !important; }
   .menu.active{right:0 !important}
   #submenu{display:none} #submenu.open{display:block !important}
 }
+
+@media (max-width: 768px) {
+  .logo, .navbar-brand, header .logo {
+    margin-left: 0 !important;
+    padding-left: 5px !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container.nav {
+    padding-left: 5px !important;
+  }
+  .logo img {
+    width: 130px !important;
+    height: auto !important;
+  }
+}
